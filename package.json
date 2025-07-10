@@ -1,0 +1,42 @@
+{
+  "name": "pluto-script-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:app": "vite dev --config test-app/vite.config.ts",
+    "dev:united": "concurrently \"SCRIPT_NAME=united vite build --watch --config config/vite.config.scripts.ts\" \"SCRIPT_NAME=united npm run dev:app\"",
+    "dev:your-script": "concurrently \"SCRIPT_NAME=your-script vite build --watch --config config/vite.config.scripts.ts\" \"SCRIPT_NAME=your-script npm run dev:app\"",
+    "build:united": "SCRIPT_NAME=united vite build --config config/vite.config.scripts.ts",
+    "build:your-script": "SCRIPT_NAME=your-script vite build --config config/vite.config.scripts.ts",
+    "add-script": "node config/add-script.js",
+    "dev:google-search": "concurrently \"SCRIPT_NAME=google-search vite build --watch --config config/vite.config.scripts.ts\" \"SCRIPT_NAME=google-search npm run dev:app\"",
+    "build:google-search": "SCRIPT_NAME=google-search vite build --config config/vite.config.scripts.ts"
+  },
+  "dependencies": {
+    "@plutoxyz/automation": "^3.5.1",
+    "@plutoxyz/automation-utils": "^0.0.1",
+    "@plutoxyz/react-frame": "^1.13.0",
+    "@tailwindcss/vite": "^4.0.7",
+    "@types/lodash": "^4.17.16",
+    "lodash": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "4.0.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "playwright-core": "^1.54.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.4"
+  }
+}
