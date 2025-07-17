@@ -16,7 +16,7 @@
   "dependencies": {
     "@plutoxyz/automation": "^3.5.1",
     "@plutoxyz/automation-utils": "^0.0.1",
-    "@plutoxyz/react-frame": "^1.13.0",
+    "@plutoxyz/react-frame": "^2.0.0",
     "@tailwindcss/vite": "^4.0.7",
     "@types/lodash": "^4.17.16",
     "lodash": "^4.17.21",
